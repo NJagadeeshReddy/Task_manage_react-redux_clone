@@ -1,25 +1,15 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { PureComponent } from 'react'
+import store from "./Redux/Store"
+import { Provider } from 'react-redux'
+import AddTaskContainer from './Components/Taskmanage/AddTaskContainer'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export default class App extends PureComponent {
+  render() {
+    return (
+     <Provider store={store}>
+      <AddTaskContainer/>
+     </Provider>
+    )
+  }
 }
 
-export default App;

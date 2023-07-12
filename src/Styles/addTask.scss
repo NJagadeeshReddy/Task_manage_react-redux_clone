@@ -1,0 +1,258 @@
+@import "./mixins";
+@import "./var";
+
+
+.main{
+    background-color: antiquewhite;
+}
+.header {
+    width: 90%;
+    margin: 0 auto;
+    background-color: $bg-color;
+    align-items: center;
+    text-align: center;
+    height: 10rem;
+box-shadow: 0 0 5px 0 green;
+@include smallDeviceSize{
+    height: 8rem;
+}
+    h2 {
+        font-size: 2.5rem;
+        margin: 2rem;
+        font-weight: 1000;
+
+        @include smallDeviceSize {
+            font-size: 2rem;
+        }
+    }
+
+    .addtask-btn {
+        background-color: rgb(52, 247, 247);
+        border: 2px solid black;
+        margin-bottom: 3px;
+        font-size: 1.5rem;
+        font-weight: 600;
+        padding: 0.5rem;
+        border-radius: 5px;
+        cursor: pointer;
+        &:hover{
+            background-color: antiquewhite;
+        }
+
+        @include smallDeviceSize {
+            font-size: 1rem;
+        }
+    }
+
+}
+
+
+.create-task {
+    position: absolute;
+    width: 50%;
+    height: 45%;
+    left: 25%;
+    right: 25%;
+    top: 26%;
+    bottom: 20%;
+    align-items: center;
+    text-align: center;
+    background-color: rgb(196, 219, 239);
+   
+
+    .create-title {
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: rgb(131, 143, 5);
+
+        .error-message,.error-message2,.error-message3 {
+            color: red;
+            font-size: 1rem;
+        }
+
+        p {
+            font-weight: 700;
+            font-size: 1.7rem;
+            margin: 0.4rem;
+            color: black;
+
+            @include smallDeviceSize {
+                font-size: 1.5rem;
+            }
+        }
+
+        .create-input {
+            width: 50%;
+            height: 2rem;
+            font-size: 1rem;
+        }
+
+    }
+
+    .btn {
+        display: flex;
+        gap: 1rem;
+        margin-right: 1rem;
+        margin-left: 56%;
+        margin-top: 1rem;
+
+        @include smallDeviceSize {
+            margin-left: 42%;
+        }
+
+        &-save {
+            background-color: rgb(73, 240, 22);
+            font-size: 1.2rem;
+            border: 0.5px solid green;
+
+            &:hover {
+                cursor: pointer;
+                background-color: rgb(46, 243, 46);
+                color: rgb(255, 255, 255);
+            }
+        }
+
+        &-close {
+            background-color: rgb(242, 139, 139);
+            border: 1px solid rgb(235, 60, 25);
+            color: rgb(19, 13, 13);
+            font-size: 1rem;
+
+            &:hover {
+                cursor: pointer;
+                background-color: red;
+                color: rgb(244, 166, 166);
+            }
+        }
+    }
+}
+
+.list-data {
+    width: 90%;
+    margin: 0 auto;
+    background-color: rgb(206, 201, 190);
+    border-top: 10px solid antiquewhite;
+
+    .item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0;
+        padding: 5px;
+        cursor: pointer;
+
+        h4 {
+            margin: 0.5rem;
+            font-size: 1.5rem;
+            color: rgb(214, 15, 171);
+            @include smallDeviceSize{
+                font-size: 1.1rem;
+            }
+        }
+
+        p {
+            margin: 0;
+            font-size: 1.1rem;
+            @include smallDeviceSize{
+                font-size: 1rem;
+            }
+        }
+
+        .btn-Edit {
+            background-color: yellow;
+            border: none;
+            margin-right: 5px;
+            font-size: 1.1rem;
+            padding: 5px;
+            cursor: pointer;
+            border-radius: 10%;
+        }
+
+        .btn-Delete {
+            background-color: red;
+            border: none;
+            color: white;
+            font-size: 1.1rem;
+            border-radius: 10%;
+            padding: 5px;
+            cursor: pointer;
+        }
+    }
+}
+
+.edit-item {
+    position: absolute;
+    width: 50%;
+    height: 40%;
+    left: 25%;
+    right: 25%;
+    top: 26%;
+    bottom: 20%;
+    align-items: center;
+    text-align: center;
+    background-color: rgb(195, 199, 202);
+
+    .edit-content {
+        font-size: 2rem;
+        font-weight: 700;
+        color: rgb(131, 143, 5);
+
+        p {
+            font-weight: 700;
+            font-size: 1.7rem;
+            margin: 0.4rem;
+            color: black;
+
+            @include smallDeviceSize {
+                font-size: 1.5rem;
+            }
+        }
+
+        .edit-input {
+            width: 50%;
+            height: 2rem;
+            font-size: 1rem;
+        }
+
+    }
+    .btn {
+        display: flex;
+        gap: 1rem;
+        margin-right: 1rem;
+        margin-left: 57%;
+        margin-top: 2rem;
+
+        @include smallDeviceSize {
+            margin-left: 40%;
+        }
+
+        &-save {
+            background-color: rgb(73, 240, 22);
+            font-size: 1.1rem;
+            border: 0.5px solid green;
+
+            &:hover {
+                cursor: pointer;
+                background-color: rgb(46, 243, 46);
+                color: rgb(255, 255, 255);
+            }
+        }
+
+        &-cancel {
+            background-color: rgb(242, 139, 139);
+            border: 1px solid rgb(235, 60, 25);
+            color: rgb(19, 13, 13);
+            font-size: 1.1rem;
+
+            &:hover {
+                cursor: pointer;
+                background-color: red;
+                color: rgb(244, 166, 166);
+            }
+        }
+    }
+}
+
+.hidden {
+    display: none;
+}
