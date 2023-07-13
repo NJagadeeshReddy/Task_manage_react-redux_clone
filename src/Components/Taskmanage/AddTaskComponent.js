@@ -46,7 +46,7 @@ class AddTaskComponent extends PureComponent {
     return (
       <>
         <div className="header">
-          <h2> <i>Task List</i> </h2>
+          <h2> <i>Task Management App</i> </h2>
           <button className="addtask-btn" onClick={handleClick}>
             Create Task
           </button>

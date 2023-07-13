@@ -1,7 +1,7 @@
 import React, { PureComponent } from "react";
 import AddTaskComponent from "./AddTaskComponent";
 import { connect } from "react-redux";
-import { addTask, editTask, deleteTask } from "../../Redux/Actions";
+import { addTask, editTask, deleteTask } from "../../Store/Actions";
 
 const mapStateToProps = (state) => {
   return {
